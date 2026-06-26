@@ -10981,24 +10981,27 @@ body {
 
 #mainNav {
   min-height: 3.5rem;
-  background-color: #fff;
+  /* 手機版：使用柔和的淺粉紫背景 */
+  background-color: #ede7f6;
 }
 #mainNav .navbar-toggler {
   font-size: 80%;
   padding: 0.75rem;
-  color: #64a19d;
-  border: 1px solid #64a19d;
+  /* 漢堡選單按鈕：使用深紫色 */
+  color: #7d59b3;
+  border: 1px solid #7d59b3;
 }
 #mainNav .navbar-toggler:focus {
   outline: none;
 }
 #mainNav .navbar-brand {
-  color: #000;
+  /* Logo 文字：深紫色，呼應主題 */
+  color: #4a2c73;
   font-weight: 700;
   padding: 0.9rem 0;
 }
 #mainNav .navbar-nav .nav-item:hover {
-  color: fade(#fff, 80%);
+  color: rgba(255, 255, 255, 0.8);
   outline: none;
   background-color: transparent;
 }
@@ -11006,50 +11009,61 @@ body {
   outline: none;
   background-color: transparent;
 }
+
 @media (min-width: 992px) {
   #mainNav {
     padding-top: 0;
     padding-bottom: 0;
     border-bottom: none;
     background-color: transparent;
+    /* 滑動時的背景顏色轉換動畫 */
     transition: background-color 0.3s ease-in-out;
   }
   #mainNav .navbar-brand {
     padding: 0.5rem 0;
-    color: rgba(255, 255, 255, 0.5);
+    /* 電腦版未滾動前：白色文字帶透明度，確保在紫色背景上清晰 */
+    color: rgba(255, 255, 255, 0.8);
   }
   #mainNav .nav-link {
     transition: none;
     padding: 2rem 1.5rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.8);
   }
   #mainNav .nav-link:hover {
-    color: rgba(255, 255, 255, 0.75);
+    color: #fff;
   }
   #mainNav .nav-link:active {
     color: #fff;
   }
+
+  /* 💡 當網頁向下滾動、導覽列收縮變色時（Navbar Shrink） */
   #mainNav.navbar-shrink {
-    background-color: #fff;
+    /* 滾動後的背景：帶有微透明度的極淺紫，能隱約透出後方背景，視覺更輕盈 */
+    background-color: rgba(243, 238, 249, 0.95);
+    box-shadow: 0 2px 10px rgba(74, 44, 115, 0.1); /* 淡淡的紫色陰影 */
   }
   #mainNav.navbar-shrink .navbar-brand {
-    color: #000;
+    /* 滾動後 Logo：變成優雅的深紫色 */
+    color: #4a2c73;
   }
   #mainNav.navbar-shrink .nav-link {
-    color: #000;
+    /* 滾動後一般選單文字：中深紫色 */
+    color: #614685;
     padding: 1.5rem 1.5rem 1.25rem;
     border-bottom: 0.25rem solid transparent;
   }
   #mainNav.navbar-shrink .nav-link:hover {
-    color: #64a19d;
+    /* 滑鼠懸停：亮紫色，增加互動感 */
+    color: #9c27b0;
   }
   #mainNav.navbar-shrink .nav-link:active {
-    color: #467370;
+    color: #4a2c73;
   }
   #mainNav.navbar-shrink .nav-link.active {
-    color: #64a19d;
+    /* 當前所在頁面的標籤：深紫色，並帶有紫色下底線 */
+    color: #7d59b3;
     outline: none;
-    border-bottom: 0.25rem solid #64a19d;
+    border-bottom: 0.25rem solid #7d59b3;
   }
 }
 
