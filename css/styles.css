@@ -13,7 +13,10 @@
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
-  --bs-purple: #7464a1;
+  /* ... 保持其他顏色不變 ... */
+  --bs-purple: #bfa5e7;        /* 換成你畫面中舒服的粉紫色 💜 */
+  --bs-purple-dark: #7d59b3;   /* 新增一個深紫色，用來做漸層和陰影 */
+  /* ... */
   --bs-pink: #d63384;
   --bs-red: #a16468;
   --bs-orange: #fd7e14;
@@ -11094,7 +11097,7 @@ body {
   font-size: 2.5rem;
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
-  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+  background: linear-gradient(rgba(82, 29, 99, 0.9), rgba(255, 255, 255, 0));
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
           background-clip: text;
@@ -11131,6 +11134,15 @@ body {
 }
 .about-section p {
   margin-bottom: 5rem;
+}
+.about-section {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  /* 保持你原本設定的紫色背景（這裡以你目前的紫色為例） */
+  background-color: #ba99df;
+
+  /* 加上這行：完美的頂部內陰影漸層 👇 */
+  box-shadow: inset 0px 40px 40px -20px #7d59b3;
 }
 
 .projects-section {
